@@ -1,4 +1,5 @@
 import Fecha from "./fecha.js"
+import Tiempo from "./tiempo.js"
 
 class Main {
     testFecha() {
@@ -7,9 +8,12 @@ class Main {
     }
 
     testTiempo() {
-        console.log(tiempo.getTiempo())
+        let tiempo = new Tiempo(13, 0, "pm")
+        console.log(tiempo.getFormato12())
+        console.log(tiempo.getFormato24())
     }
 }
 
 let app = new Main
 app.testFecha()
+app.testTiempo()

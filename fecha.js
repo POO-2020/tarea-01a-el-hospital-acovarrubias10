@@ -18,7 +18,7 @@ export default class Fecha {
         let semanas = this.fecha.getFullYear() - new Date(Date.now()).getFullYear()
         return semanas * 4 * 12
     }
-    getFecha(){
+    getFecha() {
         let fecha = `${this.fecha.getDate()}/${this.fecha.getMonth()+1}/${this.fecha.getFullYear()}`
         return fecha
     }
