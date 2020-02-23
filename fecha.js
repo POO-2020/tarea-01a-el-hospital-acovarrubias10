@@ -24,4 +24,8 @@ export default class Fecha {
         let fechaFormato = `${this.fecha.getDate()}/${this.nombreMes[this.fecha.getMonth()-1]}/${this.fecha.getFullYear()}`
         return fechaFormato
     }
+    getDiaFecha(){
+        let diaF = this.diaSemana[this.fecha.getDay()]
+        return diaF
+    }
 }

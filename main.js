@@ -9,6 +9,7 @@ class Main {
     testFecha() {
         let fecha = new Fecha(18, 2, 2023)
         console.log(fecha.getFecha())
+        console.log(fecha.getDiaFecha());
     }
 
     testTiempo() {
