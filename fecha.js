@@ -3,6 +3,7 @@ export default class Fecha {
     constructor(dia, mes, año) {
         this.fecha = new Date(año, mes, dia)
         this.diaSemana = ["Domingo,", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado"]
+        this.nombreMes = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
     }
 
     getAños() {
@@ -11,15 +12,16 @@ export default class Fecha {
     }
 
     getMeses() {
-        let meses = this.fecha.getFullYear() - new Date(Date.now()).getFullYear()
-        return meses * 12
+        return this.getAños() * 12
     }
     getSemanas() {
-        let semanas = this.fecha.getFullYear() - new Date(Date.now()).getFullYear()
-        return semanas * 4 * 12
+        return this.getMeses() * 4
     }
-    getFecha() {
-        let fecha = `${this.fecha.getDate()}/${this.fecha.getMonth()+1}/${this.fecha.getFullYear()}`
-        return fecha
+    getDias(){
+        return this.getSemanas() * 7
+    }
+    getFecha(){
+        let fechaFormato = `${this.fecha.getDate()}/${this.nombreMes[this.fecha.getMonth()-1]}/${this.fecha.getFullYear()}`
+        return fechaFormato
     }
 }

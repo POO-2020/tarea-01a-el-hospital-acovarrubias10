@@ -16,4 +16,3 @@ export default class Nombre {
         return `${this.nombre.charAt(0)} ${this.apellido1.charAt(0)} ${this.apellido2.charAt(0)}`
     }
 }
-//.chaArt(0)
