@@ -3,6 +3,7 @@ import Tiempo from "./tiempo.js"
 import Nombre from "./nombre.js"
 import Paciente from "./paciente.js"
 import Doctor from "./doctor.js"
+import Cita from "./cita.js"
 
 class Main {
     testFecha() {
@@ -30,6 +31,10 @@ class Main {
         let doctor = new Doctor("Cedula 1", "Especialidad: Ginecólogo", "Dr. Alfonso Lopez", 3121456798)
         console.log(doctor.getPerfil())
     }
+    testCita() {
+        let cita = new Cita(new Fecha(26, 3, 2021), new Tiempo(13, 0, "pm"), "Dr. Alfonso Lopez", new Nombre("Vanessa", "Covarrubias", "Nava"))
+        console.log(cita.getPerfil())
+    }
 }
 
 let app = new Main
@@ -38,3 +43,4 @@ app.testTiempo()
 app.testNombre()
 app.testPaciente()
 app.testDoctor()
+app.testCita()
