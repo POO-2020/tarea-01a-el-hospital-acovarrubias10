@@ -8,6 +8,10 @@ import Cita from "./cita.js"
 class Main {
     testFecha() {
         let fecha = new Fecha(18, 2, 2023)
+        console.log(fecha.getAños())
+        console.log(fecha.getMeses())
+        console.log(fecha.getSemanas())
+        console.log(fecha.getDias())
         console.log(fecha.getFecha())
         console.log(fecha.getDiaFecha());
     }
@@ -29,11 +33,11 @@ class Main {
         console.log(paciente.getPerfil())
     }
     testDoctor() {
-        let doctor = new Doctor("Cedula 1", "Especialidad: Ginecólogo", "Dr. Alfonso Lopez", 3121456798)
+        let doctor = new Doctor("Cedula1", "Especialidad", new Nombre("Jorge", "Lopez", "Nava"), 3121456789)
         console.log(doctor.getPerfil())
     }
     testCita() {
-        let cita = new Cita(new Fecha(26, 3, 2021), new Tiempo(13, 0, "pm"), "Dr. Alfonso Lopez", new Nombre("Vanessa", "Covarrubias", "Nava"))
+        let cita = new Cita(new Fecha(26, 3, 2021), new Tiempo(13, 0, "pm"), new Doctor("Cedula1", "Especialidad", new Nombre("Jorge", "Lopez", "Nava"), 3121456789), new Paciente(new Nombre("Vanessa", "Covarrubias", "Nava")))
         console.log(cita.getPerfil())
     }
 }
